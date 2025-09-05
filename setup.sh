@@ -5,14 +5,6 @@ sudo apt install snapd
 mkdir -p ~/.other_icons
 cp -a "newconfig/other_icons/." ~/.other_icons/
 
-### Brave Browser
-echo "Installing Brave Browser"
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
-sudo apt install brave-browser
-timeout 5 brave-browser
-cp -a "newconfig/Brave-Browser/." ~/.config/BraveSoftware/Brave-Browser/Default/
-
 ### Python
 echo "Installing Python Packages"
 sudo apt install python3-pip -y
@@ -46,7 +38,6 @@ sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.
 echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
 sudo apt update
 sudo apt install code -y
-# Add VSCode shortcut in uLauncher - Must be added manually
 
 ### Git
 echo "Installing Git"
@@ -113,17 +104,51 @@ gsettings set org.cinnamon panels-autohide "['1:true']"
 # Move Icons Into Center - Must be added manually
 
 ### Shortcuts
-# Toggle Light-/Darkmode - Not working
-#mkdir -p ~/.scripts
-#cp -a "newconfig/scripts/." ~/.scripts/
-#chmod +x ~/.scripts/toggle_dark_mode.sh 
-#~/.scripts/toggle_dark_mode.sh 
-#dconf write /org/cinnamon/desktop/keybindings/custom/custom0/command "'home/olipet284/.scripts/toggle_dark_mode.sh'"
-#dconf write /org/cinnamon/desktop/keybindings/custom/custom0/name "'Toggle Dark Mode'"
-#dconf write /org/cinnamon/desktop/keybindings/custom/custom0/binding "'<Control><Period>'"
-#dconf write /org/cinnamon/desktop/keybindings/custom/custom0/enabled true
+## Toggle Light-/Darkmode - Not working
+mkdir -p ~/.scripts
+cp -a "newconfig/scripts/." ~/.scripts/
+chmod +x ~/.scripts/toggle_dark_mode.sh
+# uLauncher Shortcuts
+# fdm - Force Dark Mode 
+# tdm - Toggle Dark Mode
+# flm - Force Light Mode
+
+### Brave Browser
+echo "Installing Brave Browser"
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
+sudo apt install brave-browser
+timeout 5 brave-browser
+cp -a "newconfig/Brave-Browser/." ~/.config/BraveSoftware/Brave-Browser/Default/
 
 ### Terminal - To be added
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo apt-get install fonts-powerline
+omz theme set agnoster
+
+# add more plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+sudo apt install thefuck -y
+# enable plugins
+omz plugin enable zsh-autosuggestions
+omz plugin enable zsh-syntax-highlighting
+omz plugin enable dirhistory
+omz plugin enable web-search
+omz plugin enable copydir
+omz plugin enable copyfile
+omz plugin enable extract
+omz plugin enable sudo
+omz plugin enable thefuck
+# set zsh as default shell and fix various bugs
+echo "zsh" >> ~/.bashrc
+echo "clear" >> ~/.zshrc
+sudo apt install neofetch
+echo "neofetch" >> ~/.zshrc
+echo "source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+# make terminal transparent - Must be added manually
+
 
 ### Obsidian
 ask "Do you want to install Obsidian? (y/n)" choice
