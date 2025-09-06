@@ -61,8 +61,12 @@ echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/so
 curl -sS https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 sudo apt install spotify-client
 
-
 ### Equalizer - To be added
+sudo apt install pipewire pipewire-audio-client-libraries pipewire-pulse
+systemctl --user enable pipewire pipewire-pulse
+systemctl --user start pipewire pipewire-pulse
+sudo apt install easyeffects -y
+
 ### Google Drive - To be added
 
 ### Theme - https://www.youtube.com/watch?v=OwBKbuy7U8s
