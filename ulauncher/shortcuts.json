@@ -28,5 +28,45 @@
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1756900588.8218288
+    },
+    "2c374aa7-8c8a-46a9-84b3-d6d76c180d0f": {
+        "id": "2c374aa7-8c8a-46a9-84b3-d6d76c180d0f",
+        "name": "VSCode",
+        "keyword": "vs",
+        "cmd": "code",
+        "icon": "~/.other_icons/vscode.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1756998473.3219497
+    },
+    "b81ad557-6db6-4bf5-948e-b16e98a00b7a": {
+        "id": "b81ad557-6db6-4bf5-948e-b16e98a00b7a",
+        "name": "Toggle Light-/Dark Mode",
+        "keyword": "tm",
+        "cmd": "~/.scripts/toggle_dark_mode.sh",
+        "icon": "~/.other_icons/dark-mode.svg",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1757007152.6159647
+    },
+    "3494b417-ff3a-4995-9843-5322fac602cf": {
+        "id": "3494b417-ff3a-4995-9843-5322fac602cf",
+        "name": "Force Dark Mode",
+        "keyword": "fdm",
+        "cmd": "gsettings set org.cinnamon.desktop.interface gtk-theme \"Skeuos-Blue-Dark\"",
+        "icon": "~/.other_icons/dark-mode.svg",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1757008474.684301
+    },
+    "db28535a-c66c-4746-88d8-13c99235ab4e": {
+        "id": "db28535a-c66c-4746-88d8-13c99235ab4e",
+        "name": "Force Light Mode",
+        "keyword": "flm",
+        "cmd": "gsettings set org.cinnamon.desktop.interface gtk-theme \"Skeuos-Blue-Light\"",
+        "icon": "~/.other_icons/dark-mode.svg",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1757008541.1061306
     }
 }

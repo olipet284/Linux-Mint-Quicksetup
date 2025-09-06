@@ -24,7 +24,10 @@ echo "Filesearch - https://github.com/brpaz/ulauncher-file-search"
 echo "System - https://github.com/iboyperson/ulauncher-system"
 echo "Timer - https://github.com/ulauncher/ulauncher-timer"
 echo "URL- https://github.com/DevKleber/ulauncher-open-link"
-echo "Spotify - https://github.com/the-lay/ulauncher-spotify-api" # To be added
+#echo "Spotify - https://github.com/the-lay/ulauncher-spotify-api" # Keeps crashing
+echo "Better File Browser - https://github.com/fisadev/ulauncher-better-file-browser"
+echo "YouTube Search - https://github.com/NastuzziSamy/ulauncher-youtube-search"
+echo "Bluetooth Quick Connect - https://github.com/Eckhoff42/Ulauncher-Bluetooth-quick-connect"
 
 sudo apt install copyq -y
 sudo apt install fd-find -y
