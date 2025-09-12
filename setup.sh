@@ -159,6 +159,9 @@ echo "source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions
 # make terminal transparent - Must be added manually
 
 
+### GIMP
+sudo apt install gimp -y
+
 ### Obsidian
 ask "Do you want to install Obsidian? (y/n)" choice
 if [[ $choice == [Yy]* ]]; then
