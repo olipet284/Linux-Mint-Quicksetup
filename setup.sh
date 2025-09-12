@@ -8,7 +8,7 @@ cp -a "newconfig/other_icons/." ~/.other_icons/
 ### Python
 echo "Installing Python Packages"
 sudo apt install python3-pip -y
-/usr/bin/python3 -m pip install Pint simpleeval parsedatetime pytz babel --break-system-packages
+/usr/bin/python3 -m pip install pint simpleeval parsedatetime pytz babel --break-system-packages
 
 ### uLauncher
 echo "Installing uLauncher"
@@ -24,7 +24,7 @@ echo "Filesearch - https://github.com/brpaz/ulauncher-file-search"
 echo "System - https://github.com/iboyperson/ulauncher-system"
 echo "Timer - https://github.com/ulauncher/ulauncher-timer"
 echo "URL- https://github.com/DevKleber/ulauncher-open-link"
-#echo "Spotify - https://github.com/the-lay/ulauncher-spotify-api" # Keeps crashing
+echo "Spotify - https://github.com/pywkm/ulauncher-spotify"
 echo "Better File Browser - https://github.com/fisadev/ulauncher-better-file-browser"
 echo "YouTube Search - https://github.com/NastuzziSamy/ulauncher-youtube-search"
 echo "Bluetooth Quick Connect - https://github.com/Eckhoff42/Ulauncher-Bluetooth-quick-connect"
@@ -68,6 +68,7 @@ systemctl --user start pipewire pipewire-pulse
 sudo apt install easyeffects -y
 
 ### Google Drive - To be added
+# https://forums.linuxmint.com/viewtopic.php?t=406367
 
 ### Theme - https://www.youtube.com/watch?v=OwBKbuy7U8s
 echo "Setting up Theme"
@@ -105,6 +106,7 @@ cp -a "newconfig/spices/." ~/.config/cinnamon/spices/
 ## Actions - Must be added manually
 # VSCode Launcher
 # Compress PDF
+# Merge PDF
 
 ## Panel
 gsettings set org.cinnamon panels-autohide "['1:true']"

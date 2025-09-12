@@ -68,5 +68,12 @@
         "updated_at": "2025-09-06T12:27:48.693844",
         "last_commit": "2cb1d85cdfa870888e3eeda733b63467b0966ad1",
         "last_commit_time": "2022-05-10T15:18:43"
+    },
+    "com.github.pywkm.ulauncher-spotify": {
+        "id": "com.github.pywkm.ulauncher-spotify",
+        "url": "https://github.com/pywkm/ulauncher-spotify",
+        "updated_at": "2025-09-12T07:16:24.913208",
+        "last_commit": "89d9b02316aaccea0d70b458bb97b3976287f03e",
+        "last_commit_time": "2020-02-17T16:20:21"
     }
 }
