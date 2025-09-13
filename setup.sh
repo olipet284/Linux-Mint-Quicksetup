@@ -8,6 +8,7 @@ cp -a "newconfig/other_icons/." ~/.other_icons/
 ### Python
 echo "Installing Python Packages"
 sudo apt install python3-pip -y
+sudo apt install pipx -y
 /usr/bin/python3 -m pip install pint simpleeval parsedatetime pytz babel --break-system-packages
 
 ### uLauncher
@@ -139,7 +140,11 @@ omz theme set agnoster
 # add more plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-sudo apt install thefuck -y
+
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update
+sudo apt install python3.11 python3.11-distutils -y
+pipx install --python python3.11 https://github.com/nvbn/thefuck/archive/refs/tags/3.32.zip
 # enable plugins
 omz plugin enable zsh-autosuggestions
 omz plugin enable zsh-syntax-highlighting
