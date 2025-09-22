@@ -68,9 +68,6 @@ systemctl --user enable pipewire pipewire-pulse
 systemctl --user start pipewire pipewire-pulse
 sudo apt install easyeffects -y
 
-### Google Drive - To be added
-# https://forums.linuxmint.com/viewtopic.php?t=406367
-
 ### Theme - https://www.youtube.com/watch?v=OwBKbuy7U8s
 echo "Setting up Theme"
 ## Font - https://fonts.google.com/share?selection.family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900
@@ -108,6 +105,11 @@ cp -a "newconfig/spices/." ~/.config/cinnamon/spices/
 # VSCode Launcher
 # Compress PDF
 # Merge PDF
+sudo apt install pdftk -y
+
+
+# pdf editor to redact sensitive information in pdf
+sudo apt-get install okular -y
 
 ## Panel
 gsettings set org.cinnamon panels-autohide "['1:true']"
@@ -176,13 +178,5 @@ else
     echo "Skipping Obsidian installation"
 fi
 
-### Notion
-ask "Do you want to install Notion? (y/n)" choice
-if [[ $choice == [Yy]* ]]; then
-    echo "Installing Notion"
-    sudo snap install notion-snap-reborn
-    sudo snap install notion-calendar-snap
-    brave-browser --new-window mail.notion.so # Must be added manually
-else
-    echo "Skipping Notion installation"
-fi
+### Google Drive
+sudo snap install celeste
