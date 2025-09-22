@@ -63,10 +63,6 @@ curl -sS https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg | sudo 
 sudo apt install spotify-client
 
 ### Equalizer - To be added
-sudo apt install pipewire pipewire-audio-client-libraries pipewire-pulse
-systemctl --user enable pipewire pipewire-pulse
-systemctl --user start pipewire pipewire-pulse
-sudo apt install easyeffects -y
 
 ### Theme - https://www.youtube.com/watch?v=OwBKbuy7U8s
 echo "Setting up Theme"
@@ -133,7 +129,7 @@ sudo apt install brave-browser
 timeout 5 brave-browser
 cp -a "newconfig/Brave-Browser/." ~/.config/BraveSoftware/Brave-Browser/Default/
 
-### Terminal - To be added
+### Terminal
 sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo apt-get install fonts-powerline
