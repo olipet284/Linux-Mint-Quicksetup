@@ -3,7 +3,7 @@ sudo mv /etc/apt/preferences.d/nosnap.pref /etc/apt/preferences.d/nosnap.backup
 sudo apt update
 sudo apt install snapd
 mkdir -p ~/.other_icons
-cp -a "newconfig/other_icons/." ~/.other_icons/
+cp -a "Linux-Mint-Quicksetup/other_icons/." ~/.other_icons/
 
 ### Python
 echo "Installing Python Packages"
@@ -32,7 +32,7 @@ echo "Bluetooth Quick Connect - https://github.com/Eckhoff42/Ulauncher-Bluetooth
 
 sudo apt install copyq -y
 sudo apt install fd-find -y
-cp -a "newconfig/ulauncher/." ~/.config/ulauncher/
+cp -a "Linux-Mint-Quicksetup/ulauncher/." ~/.config/ulauncher/
 
 ### VS Code
 echo "Installing VS Code"
@@ -67,14 +67,14 @@ sudo apt install spotify-client
 ### Theme - https://www.youtube.com/watch?v=OwBKbuy7U8s
 echo "Setting up Theme"
 ## Font - https://fonts.google.com/share?selection.family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900
-cp -a "newconfig/fonts/." ~/.local/share/fonts/
+cp -a "Linux-Mint-Quicksetup/fonts/." ~/.local/share/fonts/
 gsettings set org.gnome.desktop.interface font-name "Inter 11" # default
 # desktop font - Must be added manually
 # window font - Must be added manually
 
 ## Theme - https://www.gnome-look.org/p/1441725
-cp -a "newconfig/theme/." ~/.themes/
-cp -a "newconfig/icons/." ~/.icons/
+cp -a "Linux-Mint-Quicksetup/theme/." ~/.themes/
+cp -a "Linux-Mint-Quicksetup/icons/." ~/.icons/
 
 gsettings set org.cinnamon.desktop.interface icon-theme "Tela"
 gsettings set org.cinnamon.desktop.interface cursor-theme "Future-cyan-cursors"
@@ -86,8 +86,8 @@ gsettings set org.cinnamon.desktop.interface gtk-theme "Skeuos-Blue-Dark"
 gsettings set org.cinnamon.theme name 'Fluent-Dark-compact'
 
 ## Extensions
-cp -a "newconfig/extensions/." ~/.local/share/cinnamon/extensions/
-cp -a "newconfig/spices/." ~/.config/cinnamon/spices/
+cp -a "Linux-Mint-Quicksetup/extensions/." ~/.local/share/cinnamon/extensions/
+cp -a "Linux-Mint-Quicksetup/spices/." ~/.config/cinnamon/spices/
 
 ## Applets - Must be added manually
 # Trash
@@ -114,7 +114,7 @@ gsettings set org.cinnamon panels-autohide "['1:true']"
 ### Shortcuts
 ## Toggle Light-/Darkmode - Not working
 mkdir -p ~/.scripts
-cp -a "newconfig/scripts/." ~/.scripts/
+cp -a "Linux-Mint-Quicksetup/scripts/." ~/.scripts/
 chmod +x ~/.scripts/toggle_dark_mode.sh
 # uLauncher Shortcuts
 # fdm - Force Dark Mode 
@@ -127,7 +127,7 @@ sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://b
 sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
 sudo apt install brave-browser
 timeout 5 brave-browser
-cp -a "newconfig/Brave-Browser/." ~/.config/BraveSoftware/Brave-Browser/Default/
+cp -a "Linux-Mint-Quicksetup/Brave-Browser/." ~/.config/BraveSoftware/Brave-Browser/Default/
 
 ### Terminal
 sudo apt install zsh -y
