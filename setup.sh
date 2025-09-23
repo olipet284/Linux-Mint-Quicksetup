@@ -1,7 +1,12 @@
+#!/bin/bash
+# Linux Mint Quicksetup Script
+
 sudo apt install curl
 sudo mv /etc/apt/preferences.d/nosnap.pref /etc/apt/preferences.d/nosnap.backup
 sudo apt update
 sudo apt install snapd
+
+# Used for custom web apps 
 mkdir -p ~/.other_icons
 cp -a "Linux-Mint-Quicksetup/other_icons/." ~/.other_icons/
 
@@ -43,11 +48,6 @@ echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] h
 sudo apt update
 sudo apt install code -y
 
-### Git
-echo "Installing Git"
-sudo apt install git -y
-read -p "Enter your Git username: " username # Ask for Git Username
-git config --global user.name "$username"
 
 ### Firefox and Thunderbird
 echo "Removing Firefox and Thunderbird"
