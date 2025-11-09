@@ -133,13 +133,7 @@ cp -a "Linux-Mint-Quicksetup/Brave-Browser/." ~/.config/BraveSoftware/Brave-Brow
 sudo apt install gimp -y
 
 ### Obsidian
-ask "Do you want to install Obsidian? (y/n)" choice
-if [[ $choice == [Yy]* ]]; then
-    echo "Installing Obsidian"
-    sudo snap install obsidian --classic
-else
-    echo "Skipping Obsidian installation"
-fi
+sudo snap install obsidian --classic
 
 ### Google Drive
 sudo snap install celeste
@@ -147,3 +141,32 @@ sudo snap install celeste
 ### Terminal
 sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# MUST MANUALLY CHOOSE YES TO CHANGE DEFAULT SHELL TO ZSH
+# MUST WRITE EXIT TO CLOSE THE ZSH WINDOW AFTER INSTALLATION
+sudo apt-get install fonts-powerline
+omz theme set agnoster
+
+# add more plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update
+sudo apt install python3.11 python3.11-distutils -y
+pipx install --python python3.11 https://github.com/nvbn/thefuck/archive/refs/tags/3.32.zip
+# enable plugins
+omz plugin enable zsh-autosuggestions
+omz plugin enable zsh-syntax-highlighting
+omz plugin enable dirhistory
+omz plugin enable web-search
+omz plugin enable copydir
+omz plugin enable copyfile
+omz plugin enable extract
+omz plugin enable sudo
+omz plugin enable thefuck
+
+echo "zsh" >> ~/.bashrc
+echo "clear" >> ~/.zshrc
+sudo apt install neofetch
+echo "neofetch" >> ~/.zshrc
+echo "source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc

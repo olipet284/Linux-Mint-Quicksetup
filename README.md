@@ -50,7 +50,9 @@ Linux Mint Quicksetup is a shell script and checklist to help you quickly set up
    sudo apt install curl
    curl -fsSL https://raw.githubusercontent.com/olipet284/Linux-Mint-Quicksetup/main/init.sh -o init.sh && bash init.sh
    ```
-4. Go through the manual checklist below and apply the remaining changes.
+4. Upon reading "Do you want to change your default shell to zsh? [Y/n]", type *"y"* and `Enter`
+5. Write *"exit"* and press `Enter`
+6. Go through the manual checklist below and apply the remaining changes.
 
 ---
 
