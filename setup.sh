@@ -51,9 +51,9 @@ sudo apt install code -y
 
 ### Firefox and Thunderbird
 echo "Removing Firefox and Thunderbird"
-sudo apt purge firefox 'firefox-locale-*'
-rm -rf ~/.mozilla ~/.cache/mozilla   
-sudo apt purge thunderbird*
+sudo apt purge firefox 'firefox-locale-*' -y
+rm -rf ~/.mozilla ~/.cache/mozilla
+sudo apt purge thunderbird* -y
 sudo apt autoremove
 
 ### Spotify
@@ -129,39 +129,6 @@ sudo apt install brave-browser
 timeout 5 brave-browser
 cp -a "Linux-Mint-Quicksetup/Brave-Browser/." ~/.config/BraveSoftware/Brave-Browser/Default/
 
-### Terminal
-sudo apt install zsh -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sudo apt-get install fonts-powerline
-omz theme set agnoster
-
-# add more plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-sudo add-apt-repository ppa:deadsnakes/ppa -y
-sudo apt update
-sudo apt install python3.11 python3.11-distutils -y
-pipx install --python python3.11 https://github.com/nvbn/thefuck/archive/refs/tags/3.32.zip
-# enable plugins
-omz plugin enable zsh-autosuggestions
-omz plugin enable zsh-syntax-highlighting
-omz plugin enable dirhistory
-omz plugin enable web-search
-omz plugin enable copydir
-omz plugin enable copyfile
-omz plugin enable extract
-omz plugin enable sudo
-omz plugin enable thefuck
-# set zsh as default shell and fix various bugs
-echo "zsh" >> ~/.bashrc
-echo "clear" >> ~/.zshrc
-sudo apt install neofetch
-echo "neofetch" >> ~/.zshrc
-echo "source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
-# make terminal transparent - Must be added manually
-
-
 ### GIMP
 sudo apt install gimp -y
 
@@ -176,3 +143,7 @@ fi
 
 ### Google Drive
 sudo snap install celeste
+
+### Terminal
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

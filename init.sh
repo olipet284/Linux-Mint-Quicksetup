@@ -10,3 +10,5 @@ git clone https://github.com/olipet284/Linux-Mint-Quicksetup.git ~/Linux-Mint-Qu
 
 chmod +x ~/Linux-Mint-Quicksetup/setup.sh
 bash ~/Linux-Mint-Quicksetup/setup.sh
+chmod +x ~/Linux-Mint-Quicksetup/zsh_setup.sh
+bash ~/Linux-Mint-Quicksetup/zsh_setup.sh

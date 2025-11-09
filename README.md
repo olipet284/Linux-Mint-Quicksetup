@@ -43,12 +43,12 @@ Linux Mint Quicksetup is a shell script and checklist to help you quickly set up
 2. Make sure your working directory is your home folder (default)
 3. Download and run the `init.sh` file using one of the following scripts:
    ```bash
-   wget -qO /init.sh https://raw.githubusercontent.com/olipet284/Linux-Mint-Quicksetup/main/init.sh && bash /init.sh
+   wget -qO init.sh https://raw.githubusercontent.com/olipet284/Linux-Mint-Quicksetup/main/init.sh && bash init.sh
    ```
    or
    ```bash
    sudo apt install curl
-   curl -fsSL https://raw.githubusercontent.com/olipet284/Linux-Mint-Quicksetup/main/init.sh -o /init.sh && bash /init.sh
+   curl -fsSL https://raw.githubusercontent.com/olipet284/Linux-Mint-Quicksetup/main/init.sh -o init.sh && bash init.sh
    ```
 4. Go through the manual checklist below and apply the remaining changes.
 
